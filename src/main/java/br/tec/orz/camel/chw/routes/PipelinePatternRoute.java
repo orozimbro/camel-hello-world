@@ -3,14 +3,13 @@ package br.tec.orz.camel.chw.routes;
 import org.apache.camel.builder.RouteBuilder;
 
 //@Component
-public class DirectSenderRoute extends RouteBuilder{
+public class PipelinePatternRoute extends RouteBuilder{
 
 	@Override
 	public void configure() throws Exception {
-		from("file:files/input")
-		.to("direct:log-file-values");
+		from("timer:pipeline?period=10000")
+		.pipeline()
+		.to("log:pipeline");
 	}
 
 }
-
-

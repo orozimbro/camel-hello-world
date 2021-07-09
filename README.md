@@ -1,4 +1,4 @@
-# Apache Camel
+# Camel Hello World Examples
 
 This project has a lot of examples of Apache Camel features.
 
@@ -41,10 +41,26 @@ To run Unmarshal XML is necessary:
 
 * Include new dependency in pom.xml (`<artifactId>camel-jacksonxml-starter</artifactId>`).
 
+#### Running CSV Messages
+To run CSV examples is necessary:
+
+* Include new dependency in pom.xml (`<artifactId>camel-csv-starter</artifactId>`).
+
 #### Running MessageHistory
 To run MessageHistory in complete mode is necessary:
 
 * Configure 'camel.springboot.message-history' on application.props file (`camel.springboot.message-history=true`)
+
+#### Running Encrypt and Decrypt examples
+To run encrypt and decrypt examplas is necessary:
+
+* Include new dependency in pom.xml (`<artifactId>camel-crypto-starter</artifactId>`).
+* Create a key store for decription: 
+
+```
+keytool -genseckey -alias myDesKey -keypass someKeyPassword -keystore myDesKey.jceks -storepass someKeystorePassword -v -storetype JCEKS -keyalg DES
+```
+
 
 ## Running External Dependencies Server
 

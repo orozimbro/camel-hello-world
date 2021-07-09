@@ -7,4 +7,8 @@ camel:
     kafka:
       brokers: localhost:9092
   springboot:
-    message-history: true      
+    message-history: true
+    
+camel-hello-world:
+  timer-period: 15000
+  log-endpoint: log:first-log
