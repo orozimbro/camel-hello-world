@@ -92,3 +92,7 @@ docker logs -f
 
 > In case of error like this: `java.net.UnknownHostException: 587a60cb3d5d`  
 Its necessary config your /etc/hosts to know this value as 127.0.0.1
+
+-----------------------------------------------------
+New lines after line-separator. This lines must be
+removed when this commit will be removed.
